@@ -1,9 +1,13 @@
-function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline">Fake shop app</h1>
-    </>
-  );
-}
+// import MainNavigation from "./components/MainNavigation";
 
-export default App;
+// function App() {
+//   return (
+//     <>
+//       <div className="bg-slate-100 ">
+//         <MainNavigation />
+//       </div>
+//     </>
+//   );
+// }
+
+// export default App;
