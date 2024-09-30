@@ -1,18 +1,21 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import MainNavigation from "../components/MainNavigation";
+
 import Loader from "../components/Loader";
+import { CartProvider } from "../context/CartContext";
 
 function Root() {
   const navigation = useNavigation();
-  console.log(navigation);
   const isLoading = navigation.state === "loading";
   return (
     <div>
       {isLoading && <Loader />}
-      <MainNavigation />
-      <main>
-        <Outlet />
-      </main>
+      <CartProvider>
+        <MainNavigation />
+        <main>
+          <Outlet />
+        </main>
+      </CartProvider>
     </div>
   );
 }

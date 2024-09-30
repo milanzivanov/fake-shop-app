@@ -1,20 +1,17 @@
 import { Link } from "react-router-dom";
 
 function Home() {
-  //   Pocinjemo sa Home stranicom, gde smo kreativni u dizajniranju izgleda. Na ovoj
-  // stranici isticemo dugme Discover our products koje vodi korisnike direktno na
-  // Products stranicu.
   return (
     <div className="h-[calc(100vh-96px)] bg-blue-100 bg-[url('/bg-image.jpeg')] bg-cover">
       <div className="mx-auto max-w-7xl flex flex-col justify-center items-center h-full">
-        <h1 className="text-6xl font-bold tracking-tight text-slate-50 mb-10">
+        <h1 className="text-6xl font-bold tracking-wide text-slate-50 mb-10">
           Find your perfect match.
         </h1>
         <Link
           to="/products"
           className="flex items-center bg-indigo-500 hover:bg-indigo-600 text-slate-50 text-3xl px-10 py-3 rounded-md"
         >
-          Discover our products
+          Discover our products <span className="ml-2">&rarr;</span>
         </Link>
       </div>
     </div>

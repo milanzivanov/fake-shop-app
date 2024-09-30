@@ -2,15 +2,16 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root.jsx";
+import AppLayout from "./routes/AppLayout.jsx";
 
 import Home from "./pages/Home.jsx";
 import Products, { loader as productsLoader } from "./pages/Products.jsx";
-import Product from "./pages/Product.jsx";
+import About from "./pages/About.jsx";
 import ProductDetails, {
   loader as productDetailsLoader
 } from "./pages/ProductDetails.jsx";
 import Cart from "./pages/Cart.jsx";
+import Order from "./pages/Order.jsx";
 import Error from "./pages/Error.jsx";
 
 import "./index.css";
@@ -18,7 +19,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <AppLayout />,
     errorElement: <Error />,
     children: [
       { index: true, element: <Home /> },
@@ -34,12 +35,16 @@ const router = createBrowserRouter([
         loader: productDetailsLoader
       },
       {
-        path: "product",
-        element: <Product />
+        path: "about",
+        element: <About />
       },
       {
         path: "cart",
         element: <Cart />
+      },
+      {
+        path: "order-summary",
+        element: <Order />
       }
     ]
   }
