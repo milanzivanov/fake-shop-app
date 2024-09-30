@@ -25,20 +25,24 @@ function ProductDetails() {
     <div>
       <div className="mx-auto max-w-7xl">
         <div className="flex justify-center py-5">
-          <div className="w-1/2 bg-slate-50 shadow-md mt-5 p-5">
-            <h2 className="tracking-wide text-3xl py-5 font-bold text-gray-900">
+          <div className="flex justify-center flex-col items-center w-1/2 bg-slate-50 shadow-md mt-5 p-5">
+            <h2 className="text-center tracking-wide text-3xl py-5 font-bold text-gray-900">
               {product.title}
             </h2>
             <img
-              className="w-1/2 pb-5"
+              className=" w-1/2 pb-5"
               src={product.image}
               alt={product.title}
             />
-            <p className="text-balance leading-relaxed pb-5">
+            <p className="text-center text-balance leading-relaxed pb-5">
               {product.description}
             </p>
-            <p className="text-balanced pb-5">Category: {product.category}</p>
-            <p className="text-xl italic pb-5">{product.price}&#8364;</p>
+            <p className="text-md text-balanced pb-5">
+              <span className="font-bold">Category</span>: {product.category}
+            </p>
+            <p className="text-xl italic pb-5">
+              <span className="font-bold">Price</span>:{product.price}&#8364;
+            </p>
             <div className="flex items-center gap-5">
               <button
                 className="text-white bg-indigo-500 rounded-sm px-3 py-2 hover:bg-indigo-600"

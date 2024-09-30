@@ -7,7 +7,7 @@ function Home() {
         <h2 className="text-3xl font-bold tracking-wide text-indigo-300 mb-5">
           Fake Shop App
         </h2>
-        <h1 className="text-6xl font-bold tracking-wide text-slate-50 mb-10">
+        <h1 className="text-6xl font-bold tracking-wide text-slate-50 mb-16">
           Find your perfect match.
         </h1>
         <Link

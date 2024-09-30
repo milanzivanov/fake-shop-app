@@ -8,7 +8,7 @@ function Product() {
       <h2 className="text-3xl font-bold tracking-wide py-5 text-gray-900">
         About task
       </h2>
-      <ul className="bg-slate-50 p-5 rounded-sm text-lg">
+      <ul className="bg-slate-50 p-5 rounded-sm shadow-md text-lg">
         <h3 className="text-2xl font-bold tracking-wide py-2">
           Final task from javascript-react course summer 2024
         </h3>

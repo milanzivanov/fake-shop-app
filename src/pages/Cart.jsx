@@ -17,7 +17,7 @@ function Cart() {
             <div className="flex flex-wrap gap-5">
               {cartItem.map((product) => (
                 <div
-                  className="flex-[0_0_32%] bg-slate-100 p-5 rounded-sm"
+                  className="flex-[0_0_32%] bg-slate-100 p-5 rounded-sm shadow-sm"
                   key={product.id}
                 >
                   <div>
