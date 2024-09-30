@@ -19,10 +19,10 @@ function Products() {
         <div className="grid grid-cols-3 gap-5">
           {products.map((product) => (
             <div
-              className="flex bg-slate-100 p-5 my-5 rounded-sm"
+              className="flex bg-slate-100 p-5 my-5 rounded-sm shadow-sm"
               key={product.id}
             >
-              <div className="flex-1">
+              <div className="flex-1 ">
                 <div>
                   <h3 className="text-xl text-gray-900 font-bold tracking-wide pb-5">
                     {product.title}
