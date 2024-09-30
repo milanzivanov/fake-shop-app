@@ -34,7 +34,7 @@ function ProductDetails() {
               src={product.image}
               alt={product.title}
             />
-            <p className="text-center text-balance leading-relaxed pb-5">
+            <p className=" text-pretty leading-relaxed pb-5">
               {product.description}
             </p>
             <p className="text-md text-balanced pb-5">
