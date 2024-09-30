@@ -13,16 +13,17 @@ function Products() {
   return (
     <div>
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl font-bold tracking-tight py-5 text-gray-900 sm:text-4xl">
+        <h2 className="text-4xl font-bold tracking-tight pb-5 pt-8  text-gray-900">
           Get ready to shop &apos;til you drop.
         </h2>
         <div className="grid grid-cols-3 gap-5">
           {products.map((product) => (
-            <div
-              className="flex bg-slate-100 p-5 my-5 rounded-sm shadow-sm"
+            <Link
+              className="flex bg-slate-100 hover:bg-slate-200 p-5 my-5 rounded-sm shadow-sm"
               key={product.id}
+              to={`/products/${product.id}`}
             >
-              <div className="flex-1 ">
+              <div className="flex flex-col">
                 <div>
                   <h3 className="text-xl text-gray-900 font-bold tracking-wide pb-5">
                     {product.title}
@@ -38,17 +39,12 @@ function Products() {
                     {product.description}
                   </p>
                   <p className="italic font-bold text-xl mb-5">
+                    <span className="font-normal">Price: </span>
                     {product.price}&#8364;
                   </p>
-                  <Link
-                    className=" text-white bg-indigo-500 rounded-sm px-3 py-2 hover:bg-indigo-600"
-                    to={`/products/${product.id}`}
-                  >
-                    See product<span className="ml-2">&rarr;</span>
-                  </Link>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
