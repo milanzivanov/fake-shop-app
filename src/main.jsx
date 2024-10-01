@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppLayout from "./routes/AppLayout.jsx";
+import AppLayout from "./pages/AppLayout.jsx";
 
 import Home from "./pages/Home.jsx";
 import Products, { loader as productsLoader } from "./pages/Products.jsx";
@@ -22,7 +22,10 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
-      { index: true, element: <Home /> },
+      {
+        index: true,
+        element: <Home />
+      },
       {
         path: "products",
         element: <Products />,

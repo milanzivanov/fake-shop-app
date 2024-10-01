@@ -24,11 +24,13 @@ function Cart() {
                     <h3 className="text-xl font-bold pb-5">
                       {product.title} - {product.price}&#8364;
                     </h3>
-                    <img
-                      className="w-40 pb-5"
-                      src={product.image}
-                      alt={product.title}
-                    />
+                    <div className="flex justify-center">
+                      <img
+                        className="w-40 pb-5"
+                        src={product.image}
+                        alt={product.title}
+                      />
+                    </div>
                     <p className="text-balance pb-5">{product.description}</p>
                     <button
                       className="text-white bg-red-500 rounded-sm px-3 py-2 hover:bg-red-600"

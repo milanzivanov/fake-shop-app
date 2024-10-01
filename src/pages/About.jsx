@@ -46,8 +46,16 @@ function Product() {
           svih dodatih proizvoda I ukupnu cenu. U okviru forme, postoji dugme
           Checkout koje, kada se klikne, vraca korisnike na Home stranicu.
         </li>
-        <li className="py-5 mb-10 text-balance text-indigo-500" target="_blank">
-          API: <a href="https://fakestoreapi.com">https://fakestoreapi.com</a>/
+        <li className="py-5 mb-10 text-balance text-indigo-500">
+          API:{" "}
+          <a
+            href="https://fakestoreapi.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://fakestoreapi.com
+          </a>
+          /
         </li>
         <button
           className="text-white bg-indigo-500 rounded-sm px-3 py-2 hover:bg--600"

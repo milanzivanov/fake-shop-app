@@ -9,7 +9,7 @@ function MainNavigation() {
       <header className="mx-auto max-w-7xl flex items-center justify-between  p-4">
         <img
           className="h-16 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+          src="https://ik.imagekit.io/milanz/milanzivanov_com/mzLogo2020_8BxKnLeaIZ.svg?updatedAt=1603180813004"
           alt=""
         />
         <nav>

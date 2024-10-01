@@ -42,7 +42,8 @@ function ProductDetails() {
                 <span className="font-bold">Category</span>: {product.category}
               </p>
               <p className="text-xl italic pb-5">
-                <span className="font-bold">Price</span>:{product.price}&#8364;
+                <span>Price: </span>
+                <span className="font-bold">{product.price}&#8364;</span>
               </p>
             </div>
             <div className="flex items-center gap-5">
