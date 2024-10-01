@@ -44,7 +44,7 @@ export function Slider() {
         <SwiperSlide key={product.id}>
           <div className="relative w-full h-[500px] flex justify-center items-center">
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-center rounded-md filter opacity-70"
               style={{ backgroundImage: `url(${product.image})` }}
             />
           </div>

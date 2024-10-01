@@ -7,11 +7,13 @@ function MainNavigation() {
   return (
     <div className="bg-slate-100 shadow-md">
       <header className="mx-auto max-w-7xl flex items-center justify-between  p-4">
-        <img
-          className="h-16 w-auto"
-          src="https://ik.imagekit.io/milanz/milanzivanov_com/mzLogo2020_8BxKnLeaIZ.svg?updatedAt=1603180813004"
-          alt=""
-        />
+        <NavLink to="/">
+          <img
+            className="h-16 w-auto"
+            src="https://ik.imagekit.io/milanz/milanzivanov_com/mzLogo2020_8BxKnLeaIZ.svg?updatedAt=1603180813004"
+            alt=""
+          />
+        </NavLink>
         <nav>
           <ul className="flex space-x-4">
             <li>

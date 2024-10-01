@@ -38,8 +38,8 @@ function Products() {
                   <p className="text-balance text-base leading-relaxed mb-5">
                     {product.description}
                   </p>
-                  <p className="italic font-bold text-xl mb-5">
-                    <span className="font-normal">Price: </span>
+                  <p className="italic font-bold text-xl mb-5 text-indigo-500">
+                    <span className=" text-gray-800">Price: </span>
                     {product.price}&#8364;
                   </p>
                 </div>
