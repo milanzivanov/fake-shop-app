@@ -1,7 +1,17 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Slider } from "../components/Slider";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+
+import { getProducts } from "../services/apiProducts";
+
+export async function loader() {
+  const products = await getProducts();
+  return products;
+}
 
 function Home() {
+  const products = useLoaderData();
+
   return (
     <>
       <div className="flex justify-center h-[calc(100vh-96px)] bg-blue-100 bg-[url('/bg-image.jpeg')] bg-cover">
@@ -11,7 +21,7 @@ function Home() {
           </h1>
 
           <div className="z-50 w-full mb-10">
-            <Slider />
+            <Slider products={products} />
           </div>
           <Link
             to="/products"

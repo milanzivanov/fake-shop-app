@@ -1,25 +1,13 @@
-import { useState, useEffect } from "react";
-
+/* eslint-disable react/prop-types */
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-export function Slider() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(function () {
-    async function getProducts() {
-      const response = await fetch(`https://fakestoreapi.com/products`);
-      const data = await response.json();
-      setProducts(data);
-    }
-    getProducts();
-  }, []);
-
+export function Slider({ products }) {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, Autoplay]}

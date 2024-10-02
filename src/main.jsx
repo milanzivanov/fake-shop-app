@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./pages/AppLayout.jsx";
 
-import Home from "./pages/Home.jsx";
+import Home, { loader as productsData } from "./pages/Home.jsx";
 import Products, { loader as productsLoader } from "./pages/Products.jsx";
 import About from "./pages/About.jsx";
 import ProductDetails, {
@@ -24,7 +24,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
+        loader: productsData
       },
       {
         path: "products",
