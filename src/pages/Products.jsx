@@ -28,11 +28,13 @@ function Products() {
                   <h3 className="text-xl text-gray-900 font-bold tracking-wide pb-5">
                     {product.title}
                   </h3>
-                  <img
-                    className="w-40"
-                    src={product.image}
-                    alt={product.title}
-                  />
+                  <div className="flex justify-center">
+                    <img
+                      className="w-40"
+                      src={product.image}
+                      alt={product.title}
+                    />
+                  </div>
                 </div>
                 <div className="py-2">
                   <p className="text-balance text-base leading-relaxed mb-5">

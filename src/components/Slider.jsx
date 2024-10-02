@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -22,12 +22,16 @@ export function Slider() {
 
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, Autoplay]}
       spaceBetween={10}
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false
+      }}
       className="max-w-[90%]"
       breakpoints={{
         340: {
