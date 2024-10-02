@@ -5,6 +5,11 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItem, setCartItem] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
 
   function addToCart(product) {
     setCartItem([...cartItem, product]);
@@ -21,7 +26,14 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cartItem, addToCart, removeFromCart, clearCart }}
+      value={{
+        cartItem,
+        addToCart,
+        removeFromCart,
+        clearCart,
+        toggleDarkMode,
+        darkMode
+      }}
     >
       {children}
     </CartContext.Provider>

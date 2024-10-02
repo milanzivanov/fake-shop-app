@@ -9,7 +9,7 @@ function Cart() {
   return (
     <div className="h-screen">
       <div className="mx-auto max-w-7xl">
-        <h2 className="tracking-wide text-3xl py-5 font-bold text-gray-900">
+        <h2 className="text-4xl font-bold tracking-tight pb-5 pt-8 text-gray-900">
           Your shoppyng cart ({cartItem.length})
         </h2>
         <div className="mb-5">

@@ -4,7 +4,7 @@ import MainNavigation from "../components/MainNavigation";
 import Loader from "../components/Loader";
 import { CartProvider } from "../context/CartContext";
 
-function Root() {
+function RootLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
   return (
@@ -20,4 +20,4 @@ function Root() {
   );
 }
 
-export default Root;
+export default RootLayout;

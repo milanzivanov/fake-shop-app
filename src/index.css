@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @applay transition-colors duration-300;
+}
+
 .active {
   color: #6366f1;
 }

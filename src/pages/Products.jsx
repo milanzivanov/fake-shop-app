@@ -28,7 +28,7 @@ function Products() {
                   <h3 className="text-xl text-gray-900 font-bold tracking-wide pb-5">
                     {product.title}
                   </h3>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center mb-5">
                     <img
                       className="w-40"
                       src={product.image}
@@ -37,11 +37,12 @@ function Products() {
                   </div>
                 </div>
                 <div className="py-2">
-                  <p className="text-balance text-base leading-relaxed mb-5">
+                  <p className="text-balance text-base leading-relaxed mb-10">
                     {product.description}
                   </p>
-                  <p className="italic font-bold text-xl mb-5 text-indigo-500">
-                    <span className=" text-gray-800">Price: </span>
+
+                  <p className="flex justify-start italic font-bold text-xl mb-5 text-indigo-500">
+                    <span className=" text-gray-800">Price:&nbsp;</span>
                     {product.price}&#8364;
                   </p>
                 </div>
