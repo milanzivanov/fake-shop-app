@@ -12,7 +12,7 @@ export function Slider({ products }) {
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, Autoplay]}
       spaceBetween={10}
-      slidesPerView={3}
+      // slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
@@ -34,7 +34,7 @@ export function Slider({ products }) {
     >
       {products.slice(0, 4).map((product) => (
         <SwiperSlide key={product.id}>
-          <div className="relative w-full h-[500px] flex justify-center items-center">
+          <div className="relative w-full h-[400px] flex justify-center items-center">
             <div
               className="absolute inset-0 bg-cover bg-center rounded-md filter opacity-70"
               style={{ backgroundImage: `url(${product.image})` }}
