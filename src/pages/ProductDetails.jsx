@@ -1,7 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Link, useLoaderData } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { useCart } from "../context/CartContext";
 
 import { getProduct } from "../services/apiProducts";
 
@@ -13,14 +12,18 @@ export async function loader({ params }) {
 
 function ProductDetails() {
   const product = useLoaderData();
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, darkMode } = useCart();
 
   function handleAddToCart() {
     addToCart(product);
   }
 
   return (
-    <div>
+    <div
+      className={` h-[calc(100vh-96px)] dark:bg-slate-800 ${
+        darkMode && "dark"
+      } bg-slate-200`}
+    >
       <div className="mx-auto max-w-7xl">
         <div className="flex justify-center py-5">
           <div className="flex flex-col items-start w-1/2 bg-slate-50 shadow-md mt-5 p-5">

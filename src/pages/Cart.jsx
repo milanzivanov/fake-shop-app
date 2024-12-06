@@ -1,15 +1,16 @@
+import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
-
 function Cart() {
-  const { cartItem, removeFromCart } = useContext(CartContext);
-
+  const { cartItem, removeFromCart, darkMode } = useCart();
   return (
-    <div className="h-screen">
+    <div
+      className={`h-[calc(100vh-96px)] dark:bg-slate-800 ${
+        darkMode && "dark"
+      } bg-slate-200`}
+    >
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-4xl font-bold tracking-tight pb-5 pt-8 text-gray-900">
+        <h2 className="text-4xl font-bold tracking-tight pb-5 pt-8 dark:text-slate-100 text-gray-900">
           Your shoppyng cart ({cartItem.length})
         </h2>
         <div className="mb-5">
@@ -43,7 +44,9 @@ function Cart() {
               ))}
             </div>
           ) : (
-            <h3 className="text-xl font-bold pb-5">Your cart is empty.</h3>
+            <h3 className="text-xl dark:text-white font-bold pb-5">
+              Your cart is empty.
+            </h3>
           )}
           {cartItem.length > 0 && (
             <div className="flex py-5">

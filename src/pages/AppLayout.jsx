@@ -8,15 +8,15 @@ function RootLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
   return (
-    <div>
-      {isLoading && <Loader />}
-      <CartProvider>
+    <CartProvider>
+      <div>
+        {isLoading && <Loader />}
         <MainNavigation />
         <main>
           <Outlet />
         </main>
-      </CartProvider>
-    </div>
+      </div>
+    </CartProvider>
   );
 }
 

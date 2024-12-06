@@ -1,14 +1,15 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
 export const CartContext = createContext();
 
-export const CartProvider = ({ children }) => {
+const CartProvider = ({ children }) => {
   const [cartItem, setCartItem] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
 
   function toggleDarkMode() {
-    setDarkMode(!darkMode);
+    setDarkMode((darkMode) => !darkMode);
   }
 
   function addToCart(product) {
@@ -39,3 +40,12 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
+
+function useCart() {
+  const context = useContext(CartContext);
+  if (!context)
+    throw new Error("CartContext must be used inside a CartProvider");
+  return context;
+}
+
+export { CartProvider, useCart };
